@@ -21,7 +21,7 @@ export class MoviesComponent implements OnInit {
   }
   getApiData(genre?: string, sort: string = '&sort_by=popularity', page: string = '&page=1'): Observable<any> {
     if (genre === null) {
-      return this.httpClient.get(`${this.apiData}${sort}${page}`);
+      return this.httpClient.get(`${this.apiData} ${sort} ${page}`);
     }
     else {
       return this.httpClient.get(`${this.apiData} ${sort} ${genre} ${page}`);
