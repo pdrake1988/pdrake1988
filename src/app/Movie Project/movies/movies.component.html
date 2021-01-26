@@ -1,8 +1,26 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <a class="btn btn-primary" role="button" routerLink="'/'">Home</a>
+      </div>
+      <div class="col-md-7">
+        <h1>Movie Streaming Availability App</h1>
+      </div>
+      <div class="dropdown col-md-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Genre</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" [routerLink]="['with_genres']" [queryParams]="{ genre_id:28 }" queryParamsHandling="merge">Action</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 <body>
 <div class="container">
   <div class="row">
     <div class="col-md-4" *ngFor="let movie of movieList">
-      <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+      <img src="https://image.tmdb.org/t/p/w342/{{movie.poster_path}}">
     </div>
   </div>
 </div>
