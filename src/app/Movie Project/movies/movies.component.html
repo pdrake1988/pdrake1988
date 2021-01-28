@@ -5,12 +5,13 @@
         <a class="btn btn-primary" role="button" routerLink="/Home">Home</a>
       </div>
       <div class="col-md-7">
-        <h1>Movie Streaming Availability App</h1>
+        <h1>Movie Streaming Availability App </h1>
       </div>
       <div class="dropdown col-md-3">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Genre</button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" (click)="getApiData('&with_genres=28')">Action</a>
+
+          <a class="dropdown-item" href="/Movies?filterBy=28">Action</a>
         </div>
       </div>
     </div>
@@ -20,7 +21,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4" *ngFor="let movie of movieList">
-      <img class="img-fluid" src="https://image.tmdb.org/t/p/w342/{{movie.poster_path}}" alt="{{movie.original_title}}">
+      <a><img class="img-fluid" src="https://image.tmdb.org/t/p/w342/{{movie.poster_path}}" alt="{{movie.original_title}}"></a>
     </div>
   </div>
 </div>
