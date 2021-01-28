@@ -4,14 +4,50 @@
       <div class="col-md-2">
         <a class="btn btn-primary" role="button" routerLink="/Home">Home</a>
       </div>
-      <div class="col-md-7">
-        <h1>Movie Streaming Availability App </h1>
+      <div class="btn-group dropleft">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/Movies?sortBy=popularity.asc">Popularity Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=popularity.desc">Popularity Descending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=release_date.asc">Release Date Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=release_date.desc">Release Date Descending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=revenue.asc">Revenue Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=revenue.desc">Revenue Descending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=primary_release_date.asc">Primary Release Date Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=primary_release_date.desc">Primary Release Date Descending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=original_title.asc">Original Title Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=original_title.desc">Original Title Descending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=vote_average.asc">Vote Average Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=vote_average.desc">Vote Average Descending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=vote_count.asc">Vote Count Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=vote_count.desc">Vote Count Descending</a>
+        </div>
       </div>
-      <div class="dropdown col-md-3">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Genre</button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
+      <div class="col-md-4">
+        <h5>Movie Streaming Availability App</h5>
+      </div>
+      <div class="btn-group dropright">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Genre</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/Movies">None</a>
           <a class="dropdown-item" href="/Movies?filterBy=28">Action</a>
+          <a class="dropdown-item" href="/Movies?filterBy=12">Adventure</a>
+          <a class="dropdown-item" href="/Movies?filterBy=16">Animation</a>
+          <a class="dropdown-item" href="/Movies?filterBy=35">Comedy</a>
+          <a class="dropdown-item" href="/Movies?filterBy=80">Crime</a>
+          <a class="dropdown-item" href="/Movies?filterBy=99">Documentary</a>
+          <a class="dropdown-item" href="/Movies?filterBy=18">Drama</a>
+          <a class="dropdown-item" href="/Movies?filterBy=10751">Family</a>
+          <a class="dropdown-item" href="/Movies?filterBy=36">History</a>
+          <a class="dropdown-item" href="/Movies?filterBy=27">Horror</a>
+          <a class="dropdown-item" href="/Movies?filterBy=10402">Music</a>
+          <a class="dropdown-item" href="/Movies?filterBy=9648">Mystery</a>
+          <a class="dropdown-item" href="/Movies?filterBy=10749">Romance</a>
+          <a class="dropdown-item" href="/Movies?filterBy=878">Science Fiction</a>
+          <a class="dropdown-item" href="/Movies?filterBy=10770">TV Movie</a>
+          <a class="dropdown-item" href="/Movies?filterBy=53">Thriller</a>
+          <a class="dropdown-item" href="/Movies?filterBy=10752">War</a>
+          <a class="dropdown-item" href="/Movies?filterBy=37">Western</a>
         </div>
       </div>
     </div>
@@ -21,7 +57,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4" *ngFor="let movie of movieList">
-      <a><img class="img-fluid" src="https://image.tmdb.org/t/p/w342/{{movie.poster_path}}" alt="{{movie.original_title}}"></a>
+      <a routerLink="movie-page"><img class="img-fluid" src="https://image.tmdb.org/t/p/w342/{{movie.poster_path}}" alt="{{movie.original_title}}"></a>
     </div>
   </div>
 </div>
