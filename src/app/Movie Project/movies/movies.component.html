@@ -7,20 +7,20 @@
       <div class="btn-group dropleft">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By</button>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="/Movies?sortBy=popularity.asc">Popularity Ascending</a>
-          <a class="dropdown-item" href="/Movies?sortBy=popularity.desc">Popularity Descending</a>
-          <a class="dropdown-item" href="/Movies?sortBy=release_date.asc">Release Date Ascending</a>
-          <a class="dropdown-item" href="/Movies?sortBy=release_date.desc">Release Date Descending</a>
-          <a class="dropdown-item" href="/Movies?sortBy=revenue.asc">Revenue Ascending</a>
-          <a class="dropdown-item" href="/Movies?sortBy=revenue.desc">Revenue Descending</a>
-          <a class="dropdown-item" href="/Movies?sortBy=primary_release_date.asc">Primary Release Date Ascending</a>
-          <a class="dropdown-item" href="/Movies?sortBy=primary_release_date.desc">Primary Release Date Descending</a>
-          <a class="dropdown-item" href="/Movies?sortBy=original_title.asc">Original Title Ascending</a>
-          <a class="dropdown-item" href="/Movies?sortBy=original_title.desc">Original Title Descending</a>
-          <a class="dropdown-item" href="/Movies?sortBy=vote_average.asc">Vote Average Ascending</a>
-          <a class="dropdown-item" href="/Movies?sortBy=vote_average.desc">Vote Average Descending</a>
-          <a class="dropdown-item" href="/Movies?sortBy=vote_count.asc">Vote Count Ascending</a>
-          <a class="dropdown-item" href="/Movies?sortBy=vote_count.desc">Vote Count Descending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=popularity.asc&filterBy={{filterBy}}">Popularity Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=popularity.desc&filterBy={{filterBy}}">Popularity Descending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=release_date.asc&filterBy={{filterBy}}">Release Date Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=release_date.desc&filterBy={{filterBy}}">Release Date Descending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=revenue.asc&filterBy={{filterBy}}">Revenue Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=revenue.desc&filterBy={{filterBy}}">Revenue Descending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=primary_release_date.asc&filterBy={{filterBy}}">Primary Release Date Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=primary_release_date.desc&filterBy={{filterBy}}">Primary Release Date Descending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=original_title.asc&filterBy={{filterBy}}">Original Title Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=original_title.desc&filterBy={{filterBy}}">Original Title Descending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=vote_average.asc&filterBy={{filterBy}}">Vote Average Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=vote_average.desc&filterBy={{filterBy}}">Vote Average Descending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=vote_count.asc&filterBy={{filterBy}}">Vote Count Ascending</a>
+          <a class="dropdown-item" href="/Movies?sortBy=vote_count.desc&filterBy={{filterBy}}">Vote Count Descending</a>
         </div>
       </div>
       <div class="col-md-4">
@@ -29,25 +29,25 @@
       <div class="btn-group dropright">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Genre</button>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="/Movies">None</a>
-          <a class="dropdown-item" href="/Movies?filterBy=28">Action</a>
-          <a class="dropdown-item" href="/Movies?filterBy=12">Adventure</a>
-          <a class="dropdown-item" href="/Movies?filterBy=16">Animation</a>
-          <a class="dropdown-item" href="/Movies?filterBy=35">Comedy</a>
-          <a class="dropdown-item" href="/Movies?filterBy=80">Crime</a>
-          <a class="dropdown-item" href="/Movies?filterBy=99">Documentary</a>
-          <a class="dropdown-item" href="/Movies?filterBy=18">Drama</a>
-          <a class="dropdown-item" href="/Movies?filterBy=10751">Family</a>
-          <a class="dropdown-item" href="/Movies?filterBy=36">History</a>
-          <a class="dropdown-item" href="/Movies?filterBy=27">Horror</a>
-          <a class="dropdown-item" href="/Movies?filterBy=10402">Music</a>
-          <a class="dropdown-item" href="/Movies?filterBy=9648">Mystery</a>
-          <a class="dropdown-item" href="/Movies?filterBy=10749">Romance</a>
-          <a class="dropdown-item" href="/Movies?filterBy=878">Science Fiction</a>
-          <a class="dropdown-item" href="/Movies?filterBy=10770">TV Movie</a>
-          <a class="dropdown-item" href="/Movies?filterBy=53">Thriller</a>
-          <a class="dropdown-item" href="/Movies?filterBy=10752">War</a>
-          <a class="dropdown-item" href="/Movies?filterBy=37">Western</a>
+          <a class="dropdown-item" href="/Movies?sortBy={{sortBy}}">None</a>
+          <a class="dropdown-item" href="/Movies?filterBy=28&sortBy={{sortBy}}">Action</a>
+          <a class="dropdown-item" href="/Movies?filterBy=12&sortBy={{sortBy}}">Adventure</a>
+          <a class="dropdown-item" href="/Movies?filterBy=16&sortBy={{sortBy}}">Animation</a>
+          <a class="dropdown-item" href="/Movies?filterBy=35&sortBy={{sortBy}}">Comedy</a>
+          <a class="dropdown-item" href="/Movies?filterBy=80&sortBy={{sortBy}}">Crime</a>
+          <a class="dropdown-item" href="/Movies?filterBy=99&sortBy={{sortBy}}">Documentary</a>
+          <a class="dropdown-item" href="/Movies?filterBy=18&sortBy={{sortBy}}">Drama</a>
+          <a class="dropdown-item" href="/Movies?filterBy=10751&sortBy={{sortBy}}">Family</a>
+          <a class="dropdown-item" href="/Movies?filterBy=36&sortBy={{sortBy}}">History</a>
+          <a class="dropdown-item" href="/Movies?filterBy=27&sortBy={{sortBy}}">Horror</a>
+          <a class="dropdown-item" href="/Movies?filterBy=10402&sortBy={{sortBy}}">Music</a>
+          <a class="dropdown-item" href="/Movies?filterBy=9648&sortBy={{sortBy}}">Mystery</a>
+          <a class="dropdown-item" href="/Movies?filterBy=10749&sortBy={{sortBy}}">Romance</a>
+          <a class="dropdown-item" href="/Movies?filterBy=878&sortBy={{sortBy}}">Science Fiction</a>
+          <a class="dropdown-item" href="/Movies?filterBy=10770&sortBy={{sortBy}}">TV Movie</a>
+          <a class="dropdown-item" href="/Movies?filterBy=53&sortBy={{sortBy}}">Thriller</a>
+          <a class="dropdown-item" href="/Movies?filterBy=10752&sortBy={{sortBy}}">War</a>
+          <a class="dropdown-item" href="/Movies?filterBy=37&sortBy={{sortBy}}">Western</a>
         </div>
       </div>
     </div>
@@ -58,7 +58,24 @@
   <div class="row">
     <div class="col-md-4" *ngFor="let movie of movieList">
       <a routerLink="movie-page"><img class="img-fluid" src="https://image.tmdb.org/t/p/w342/{{movie.poster_path}}" alt="{{movie.original_title}}"></a>
+      <br>
+      <label>{{movie.original_title}}</label>
     </div>
   </div>
 </div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
 </body>
