@@ -11,9 +11,9 @@ import { Observable } from 'rxjs';
 export class MoviesComponent implements OnInit {
   apiData = 'https://api.themoviedb.org/3/discover/movie?api_key=e2e4f004450c3b2d09d61c0fb5120d06&language=en-US&include_adult=false&include_video=true';
   movieList: any;
-  filterBy = '';
-  sortBy = '';
-  page = '';
+  filterBy: string;
+  sortBy: string;
+  page: string;
   constructor(private httpClient: HttpClient, private route: ActivatedRoute) {
     this.filterBy = 'empty';
     this.sortBy = '&sort_by=popularity.desc';
@@ -23,7 +23,7 @@ export class MoviesComponent implements OnInit {
   ngOnInit(): void {
     this.route
       .queryParams
-      .subscribe( params => {
+      .subscribe(params => {
         this.filterBy = params.filterBy;
         this.sortBy = params.sortBy;
         this.page = params.page;
@@ -31,30 +31,30 @@ export class MoviesComponent implements OnInit {
     if (this.filterBy !== 'empty' && this.filterBy !== undefined && this.sortBy !== '&sort_by=popularity.desc' && this.page !== '&page=1') {
       this.getApiData(`&with_genres=${this.filterBy}`, `&sort_by=${this.sortBy}`, `&page=${this.page}`).subscribe((movies) => {
         this.movieList = movies.results;
-        console.log(movies);
+        console.log(movies.results);
         console.log(this.apiData);
       });
-    } else if (this.filterBy !== 'empty' && this.filterBy !== undefined && this.sortBy === '&sort_by=popularity.desc' && this.page === '&page=1') {
-      this.getApiData(`&with_genres=${this.filterBy}`).subscribe((movies) => {
+    } else if (this.filterBy !== 'empty' && this.filterBy !== undefined) {
+      this.getApiData(`&with_genres=${this.filterBy}`, `&sort_by=${this.sortBy}`, `&page=${this.page}`).subscribe((movies) => {
         this.movieList = movies.results;
-        console.log(movies);
+        console.log(movies.results);
         console.log(this.apiData);
       });
-    } else if (this.sortBy !== '&sort_by=popularity.desc' && this.filterBy === 'empty' || this.filterBy === undefined && this.page === '&page=1') {
-      this.getApiData(undefined, `&sort_by=${this.sortBy}`).subscribe((movies) => {
+    } else if (this.sortBy !== '&sort_by=popularity.desc') {
+      this.getApiData(undefined, `&sort_by=${this.sortBy}`, `&page=${this.page}`).subscribe((movies) => {
         this.movieList = movies.results;
-        console.log(movies);
+        console.log(movies.results);
         console.log(this.apiData);
       });
     } else {
       this.getApiData().subscribe((movies) => {
         this.movieList = movies.results;
-        console.log(movies);
+        console.log(movies.results);
         console.log(this.apiData);
       });
     }
   }
-  getApiData(genre?: string, sort: string = '&sort_by=popularity.desc', page: string = '&page=1'): Observable<any> {
+  getApiData(genre?: string, sort: string = '&sort_by=popularity.desc', page = '&page=1'): Observable<any> {
     if (genre === null || genre === undefined) {
       console.log(`${this.apiData}${sort}${page}`);
       return this.httpClient.get(`${this.apiData}${sort}${page}`);
