@@ -32,25 +32,21 @@ export class MoviesComponent implements OnInit {
       this.getApiData(`&with_genres=${this.filterBy}`, `&sort_by=${this.sortBy}`, `&page=${this.page}`).subscribe((movies) => {
         this.movieList = movies.results;
         console.log(movies.results);
-        console.log(this.apiData);
       });
     } else if (this.filterBy !== 'empty' && this.filterBy !== undefined) {
       this.getApiData(`&with_genres=${this.filterBy}`, `&sort_by=${this.sortBy}`, `&page=${this.page}`).subscribe((movies) => {
         this.movieList = movies.results;
         console.log(movies.results);
-        console.log(this.apiData);
       });
     } else if (this.sortBy !== '&sort_by=popularity.desc') {
       this.getApiData(undefined, `&sort_by=${this.sortBy}`, `&page=${this.page}`).subscribe((movies) => {
         this.movieList = movies.results;
         console.log(movies.results);
-        console.log(this.apiData);
       });
     } else {
       this.getApiData().subscribe((movies) => {
         this.movieList = movies.results;
         console.log(movies.results);
-        console.log(this.apiData);
       });
     }
   }

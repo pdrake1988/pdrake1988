@@ -17,7 +17,7 @@ export class MoviePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(param => {
-      this.movieId = param.get('movieId');
+      this.movieId = param.get('MovieId');
     });
     this.getMovieData(this.movieId).subscribe((info) => {
       this.movieInfo = info;
