@@ -57,7 +57,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4" *ngFor="let movie of movieList">
-      <a [routerLink]="['/MoviePage', movie.id]"><img class="img-fluid" src="https://image.tmdb.org/t/p/w342/{{movie.poster_path}}" alt="{{movie.original_title}}"></a>
+      <a [routerLink]="['/MoviePage', movie.id]"><img class="img-fluid" src="https://image.tmdb.org/t/p/w342{{movie.poster_path}}" alt="{{movie.original_title}}"></a>
       <br>
       <label>{{movie.original_title}}</label>
     </div>

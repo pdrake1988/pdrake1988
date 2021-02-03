@@ -1,9 +1,67 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <a class="btn btn-primary" role="button" routerLink="/Home">Home</a>
+      </div>
+      <div class="col-md-8">
+        <h1>{{movieInfo.original_title}}</h1>
+      </div>
+      <div class="col-md-2">
+        <a class="btn btn-primary" role="button" routerLink="/Movies" [queryParams]="{ sortBy: 'popularity.desc', page: '1' }">Movies Page</a>
+      </div>
+    </div>
+  </div>
+</header>
 <body>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12">
-        <img src="https://image.tmdb.org/t/p/w300/{{movieInfo.backdrop_path}}">
+      <div class="col-md-4">
+        <img class="img-fluid" src="https://image.tmdb.org/t/p/w780{{movieInfo.backdrop_path}}" alt="{{movieInfo.original_title}}">
+      </div>
+      <div class="col-md-4">
+        <p>{{movieInfo.overview}}</p>
+      </div>
+      <div class="col-md-4">
+        <img class="img-fluid" src="https://image.tmdb.org/t/p/w500{{movieInfo.poster_path}}" alt="{{movieInfo.original_title}}">
       </div>
     </div>
   </div>
 </body>
+<footer>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <label>Where to Buy</label>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let provider of providerInfo.results.US.buy">
+            <img src="https://image.tmdb.org/t/p/w45{{provider.logo_path}}" alt="{{provider.provider_name}}">
+            <br>
+            <label>{{provider.provider_name}}</label>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3>Data Source JustWatch</h3>
+        <label>Where to Stream</label>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let provider of providerInfo.results.US.flatrate">
+            <img src="https://image.tmdb.org/t/p/w45{{provider.logo_path}}" alt="{{provider.provider_name}}">
+            <br>
+            <label>{{provider.provider_name}}</label>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <label>Where to Rent</label>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let provider of providerInfo.results.US.rent">
+            <img src="https://image.tmdb.org/t/p/w45{{provider.logo_path}}" alt="{{provider.provder_name}}">
+            <br>
+            <label>{{provider.provider_name}}</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

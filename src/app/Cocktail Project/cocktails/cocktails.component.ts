@@ -10,10 +10,7 @@ import {Observable} from 'rxjs';
 export class CocktailsComponent implements OnInit {
   apiData = 'https://www.thecocktaildb.com/api/json/v2/9973533/popular.php';
   cocktailList: any;
-  toggle: boolean;
-  constructor(private httpClient: HttpClient, private renderer: Renderer2) {
-    this.toggle = false;
-  }
+  constructor(private httpClient: HttpClient) {}
 
   ngOnInit(): void {
     this.getApiData().subscribe((cocktails) => {
@@ -24,8 +21,5 @@ export class CocktailsComponent implements OnInit {
   getApiData(): Observable<any> {
     console.log(this.apiData);
     return this.httpClient.get(this.apiData);
-  }
-  toggleDiv(): void {
-    this.toggle = !this.toggle;
   }
 }

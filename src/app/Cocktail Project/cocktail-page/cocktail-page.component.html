@@ -1,0 +1,49 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <a class="btn btn-primary" role="button" routerLink="/Home">Home</a>
+      </div>
+      <div class="col-md-6">{{cocktailData.strDrink}}</div>
+    </div>
+    <div class="col-md-2">
+      <a class="btn btn-primary" role="button" routerLink="/Cocktails">Cocktails</a>
+    </div>
+  </div>
+</header>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{cocktailData.strDrinkThumb}}" alt="{{cocktailData.strDrink}}">
+      </div>
+      <div class="col-md-4">
+        <p>{{cocktailData.strInstructions}}</p>
+      </div>
+      <div class="col-md-4">
+        <ol class="list-group">
+          <li class="list-group-item">
+            <p>{{cocktailData.strIngredient1}}</p>
+            <p>{{cocktailData.strMeasure1}}</p>
+          </li>
+          <li class="list-group-item">
+            <p>{{cocktailData.strIngredient2}}</p>
+            <p>{{cocktailData.strMeasure2}}</p>
+          </li>
+          <li class="list-group-item">
+            <p>{{cocktailData.strIngredient3}}</p>
+            <p>{{cocktailData.strMeasure3}}</p>
+          </li>
+          <li class="list-group-item">
+            <p>{{cocktailData.strIngredient4}}</p>
+            <p>{{cocktailData.strMeasure4}}</p>
+          </li>
+          <li class="list-group-item">
+            <p>{{cocktailData.strIngredient5}}</p>
+            <p>{{cocktailData.strMeasure5}}</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</body>
