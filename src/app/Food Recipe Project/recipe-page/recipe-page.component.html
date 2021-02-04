@@ -1,1 +1,85 @@
-<p>recipe-page works!</p>
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <a class="btn btn-primary" role="button" routerLink="/Home">Home</a>
+      </div>
+      <div class="col-md-6">
+        <h3>Food Recipe Project</h3>
+      </div>
+      <div class="col-md-4">
+        <a class="btn btn-primary" role="button" routerLink="/Recipes">Recipes</a>
+      </div>
+    </div>
+  </div>
+</header>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img class="img-fluid" src="{{recipeData.strMealThumb}}" alt="{{recipeData.strMeal}}">
+      </div>
+      <div class="col-md-4">
+        <p>{{recipeData.strInstructions}}</p>
+      </div>
+      <ol class="list-group">
+        <li *ngIf="recipeData.strIngredient1 !== null || recipeData.strMeasure1 !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient1 !== null">{{recipeData.strIngredient1}}</p>
+          <p *ngIf="recipeData.strMeasure1 !== null">{{recipeData.strMeasure1}}</p>
+        </li>
+        <li *ngIf="recipeData.strIngredient2 !== null || recipeData.strMeasure2 !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient2 !== null">{{recipeData.strIngredient2}}</p>
+          <p *ngIf="recipeData.strMeasure2 !== null">{{recipeData.strMeasure2}}</p>
+        </li>
+        <li *ngIf="recipeData.strIngredient3 !== null || recipeData.strMeasure3 !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient3 !== null">{{recipeData.strIngredient3}}</p>
+          <p *ngIf="recipeData.strMeasure3 !== null">{{recipeData.strMeasure3}}</p>
+        </li>
+        <li *ngIf="recipeData.strIngredient4 !== null || recipeData.strMeasure4 !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient4 !== null">{{recipeData.strIngredient4}}</p>
+          <p *ngIf="recipeData.strMeasure4 !== null">{{recipeData.strMeasure4}}</p>
+        </li>
+        <li *ngIf="recipeData.strIngredient5 !== null || recipeData.strMeasure5 !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient5 !== null">{{recipeData.strIngredient5}}</p>
+          <p *ngIf="recipeData.strMeasure5 !== null">{{recipeData.strMeasure5}}</p>
+        </li>
+        <li *ngIf="recipeData.strIngredient6 !== null || recipeData.strMeasure6 !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient6 !== null">{{recipeData.strIngredient6}}</p>
+          <p *ngIf="recipeData.strMeasure6 !== null">{{recipeData.strMeasure6}}</p>
+        </li>
+        <li *ngIf="recipeData.strIngredient7 !== null || recipeData.strMeasure7 !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient7 !== null">{{recipeData.strIngredient7}}</p>
+          <p *ngIf="recipeData.strMeasure7 !== null">{{recipeData.strMeasure7}}</p>
+        </li>
+        <li *ngIf="recipeData.strIngredient8 !== null || recipeData.strMeasure8 !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient8 !== null">{{recipeData.strMeasure8}}</p>
+          <p *ngIf="recipeData.strMeasure8 !== null">{{recipeData.strMeasure8}}</p>
+        </li>
+        <li *ngIf="recipeData.strIngredient9 !== null || recipeData.strMeasure9 !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient9 !== null">{{recipeData.strIngredient9}}</p>
+          <p *ngIf="recipeData.strMeasure9 !== null">{{recipeData.strMeasure9}}</p>
+        </li>
+        <li *ngIf="recipeData.strIngredient10 !== null || recipeData.strMeasure10 !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient10 !== null">{{recipeData.strMeasure10}}</p>
+          <p *ngIf="recipeData.strMeasure10 !== null">{{recipeData.strMeasure10}}</p>
+        </li>
+        <li *ngIf="recipeData.strIngredient11 !== null || recipeData.strMeasure !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient12 !== null">{{recipeData.strIngredient12}}</p>
+          <p *ngIf="recipeData.strMeasure12 !== null">{{recipeData.strMeasure12}}</p>
+        </li>
+        <li *ngIf="recipeData.strIngredient13 !== null || recipeData.strMeasure13 !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient13 !== null">{{recipeData.strIngredient13}}</p>
+          <p *ngIf="recipeData.strMeasure13 !== null">{{recipeData.strMeasure14}}</p>
+        </li>
+        <li *ngIf="recipeData.strIngredient14 !== null || recipeData.strMeasure14 !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient14 !== null">{{recipeData.strIngredient14}}</p>
+          <p *ngIf="recipeData.strMeasure14 !== null">{{recipeData.strMeasure14}}</p>
+        </li>
+        <li *ngIf="recipeData.strIngredient15 !== null || recipeData.strMeasure15 !== null" class="list-group-item">
+          <p *ngIf="recipeData.strIngredient15 !== null">{{recipeData.strIngredient15}}</p>
+          <p *ngIf="recipeData.strMeasure15 !== null">{{recipeData.strMeasure15}}</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</body>

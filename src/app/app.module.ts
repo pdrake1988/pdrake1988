@@ -10,6 +10,7 @@ import { CocktailsComponent } from './Cocktail Project/cocktails/cocktails.compo
 import { RecipesComponent } from './Food Recipe Project/recipes/recipes.component';
 import {CocktailPageComponent} from './Cocktail Project/cocktail-page/cocktail-page.component';
 import { RecipePageComponent } from './Food Recipe Project/recipe-page/recipe-page.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +23,12 @@ import { RecipePageComponent } from './Food Recipe Project/recipe-page/recipe-pa
     CocktailPageComponent,
     RecipePageComponent
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        AppRoutingModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

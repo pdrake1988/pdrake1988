@@ -5,9 +5,9 @@
         <a class="btn btn-primary" role="button" routerLink="/Home">Home</a>
       </div>
       <div class="col-md-6">{{cocktailData.strDrink}}</div>
-    </div>
-    <div class="col-md-2">
-      <a class="btn btn-primary" role="button" routerLink="/Cocktails">Cocktails</a>
+      <div class="col-md-2">
+        <a class="btn btn-primary" role="button" routerLink="/Cocktails">Cocktails</a>
+      </div>
     </div>
   </div>
 </header>
@@ -15,32 +15,68 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
-        <img src="{{cocktailData.strDrinkThumb}}" alt="{{cocktailData.strDrink}}">
+        <img class="img-fluid" src="{{cocktailData.strDrinkThumb}}" alt="{{cocktailData.strDrink}}">
       </div>
       <div class="col-md-4">
         <p>{{cocktailData.strInstructions}}</p>
       </div>
       <div class="col-md-4">
         <ol class="list-group">
-          <li class="list-group-item">
-            <p>{{cocktailData.strIngredient1}}</p>
-            <p>{{cocktailData.strMeasure1}}</p>
+          <li *ngIf="cocktailData.strIngredient1 !== null || cocktailData.strMeasure1 !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient1 !== null">{{cocktailData.strIngredient1}}</p>
+            <p *ngIf="cocktailData.strMeasure1 !== null">{{cocktailData.strMeasure1}}</p>
           </li>
-          <li class="list-group-item">
-            <p>{{cocktailData.strIngredient2}}</p>
-            <p>{{cocktailData.strMeasure2}}</p>
+          <li *ngIf="cocktailData.strIngredient2 !== null || cocktailData.strMeasure2 !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient2 !== null">{{cocktailData.strIngredient2}}</p>
+            <p *ngIf="cocktailData.strMeasure2 !== null">{{cocktailData.strMeasure2}}</p>
           </li>
-          <li class="list-group-item">
-            <p>{{cocktailData.strIngredient3}}</p>
-            <p>{{cocktailData.strMeasure3}}</p>
+          <li *ngIf="cocktailData.strIngredient3 !== null || cocktailData.strMeasure3 !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient3 !== null">{{cocktailData.strIngredient3}}</p>
+            <p *ngIf="cocktailData.strMeasure3 !== null">{{cocktailData.strMeasure3}}</p>
           </li>
-          <li class="list-group-item">
-            <p>{{cocktailData.strIngredient4}}</p>
-            <p>{{cocktailData.strMeasure4}}</p>
+          <li *ngIf="cocktailData.strIngredient4 !== null || cocktailData.strMeasure4 !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient4 !== null">{{cocktailData.strIngredient4}}</p>
+            <p *ngIf="cocktailData.strMeasure4 !== null">{{cocktailData.strMeasure4}}</p>
           </li>
-          <li class="list-group-item">
-            <p>{{cocktailData.strIngredient5}}</p>
-            <p>{{cocktailData.strMeasure5}}</p>
+          <li *ngIf="cocktailData.strIngredient5 !== null || cocktailData.strMeasure5 !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient5 !== null">{{cocktailData.strIngredient5}}</p>
+            <p *ngIf="cocktailData.strMeasure5 !== null">{{cocktailData.strMeasure5}}</p>
+          </li>
+          <li *ngIf="cocktailData.strIngredient6 !== null || cocktailData.strMeasure6 !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient6 !== null">{{cocktailData.strIngredient6}}</p>
+            <p *ngIf="cocktailData.strMeasure6 !== null">{{cocktailData.strMeasure6}}</p>
+          </li>
+          <li *ngIf="cocktailData.strIngredient7 !== null || cocktailData.strMeasure7 !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient7 !== null">{{cocktailData.strIngredient7}}</p>
+            <p *ngIf="cocktailData.strMeasure7 !== null">{{cocktailData.strMeasure7}}</p>
+          </li>
+          <li *ngIf="cocktailData.strIngredient8 !== null || cocktailData.strMeasure8 !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient8 !== null">{{cocktailData.strMeasure8}}</p>
+            <p *ngIf="cocktailData.strMeasure8 !== null">{{cocktailData.strMeasure8}}</p>
+          </li>
+          <li *ngIf="cocktailData.strIngredient9 !== null || cocktailData.strMeasure9 !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient9 !== null">{{cocktailData.strIngredient9}}</p>
+            <p *ngIf="cocktailData.strMeasure9 !== null">{{cocktailData.strMeasure9}}</p>
+          </li>
+          <li *ngIf="cocktailData.strIngredient10 !== null || cocktailData.strMeasure10 !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient10 !== null">{{cocktailData.strMeasure10}}</p>
+            <p *ngIf="cocktailData.strMeasure10 !== null">{{cocktailData.strMeasure10}}</p>
+          </li>
+          <li *ngIf="cocktailData.strIngredient11 !== null || cocktailData.strMeasure !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient12 !== null">{{cocktailData.strIngredient12}}</p>
+            <p *ngIf="cocktailData.strMeasure12 !== null">{{cocktailData.strMeasure12}}</p>
+          </li>
+          <li *ngIf="cocktailData.strIngredient13 !== null || cocktailData.strMeasure13 !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient13 !== null">{{cocktailData.strIngredient13}}</p>
+            <p *ngIf="cocktailData.strMeasure13 !== null">{{cocktailData.strMeasure14}}</p>
+          </li>
+          <li *ngIf="cocktailData.strIngredient14 !== null || cocktailData.strMeasure14 !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient14 !== null">{{cocktailData.strIngredient14}}</p>
+            <p *ngIf="cocktailData.strMeasure14 !== null">{{cocktailData.strMeasure14}}</p>
+          </li>
+          <li *ngIf="cocktailData.strIngredient15 !== null || cocktailData.strMeasure15 !== null" class="list-group-item">
+            <p *ngIf="cocktailData.strIngredient15 !== null">{{cocktailData.strIngredient15}}</p>
+            <p *ngIf="cocktailData.strMeasure15 !== null">{{cocktailData.strMeasure15}}</p>
           </li>
         </ol>
       </div>

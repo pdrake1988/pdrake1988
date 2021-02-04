@@ -4,8 +4,21 @@
       <div class="col-md-2">
         <a class="btn btn-primary" role="button" routerLink="/Home">Home</a>
       </div>
-      <div class="col-md-6">
-        <h5>Cocktail Recipe App</h5>
+      <div class="col-md-4">
+        <h4>Cocktail Recipe App</h4>
+      </div>
+      <div class="col-md-3">
+        <label>Search Cocktails by Name</label>
+        <br>
+        <label>
+          <input (keyup.enter)="searchByName($event)">
+        </label>
+      </div>
+      <div class="col-md-3">
+        <label>Search Cocktails by Ingredient</label>
+        <label>
+          <input (keyup.enter)="searchByIngredient($event)">
+        </label>
       </div>
     </div>
   </div>

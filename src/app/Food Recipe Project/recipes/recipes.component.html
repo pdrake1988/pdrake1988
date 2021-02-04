@@ -4,9 +4,27 @@
       <div class="col-md-2">
         <a class="btn btn-primary" role="button" routerLink="/Home">Home</a>
       </div>
-      <div class="col-md-6">
-        <h5>Food Recipe App</h5>
+      <div class="col-md-4">
+        <h3>Food Recipe App</h3>
       </div>
+<!--      <div class="col-md-2">-->
+<!--        <label>Search Recipes by Name</label>-->
+<!--        <label>-->
+<!--          <input (keyup.enter)="searchByName($event)">-->
+<!--        </label>-->
+<!--      </div>-->
+<!--      <div class="col-md-2">-->
+<!--        <label>Search Recipes by Category</label>-->
+<!--        <label>-->
+<!--          <input (keyup)="searchByCategory($event)">-->
+<!--        </label>-->
+<!--      </div>-->
+<!--      <div class="col-md-2">-->
+<!--        <label>Search by Ingredient</label>-->
+<!--        <label>-->
+<!--          <input (keyup)="searchByIngredient($event)">-->
+<!--        </label>-->
+<!--      </div>-->
     </div>
   </div>
 </header>
@@ -14,7 +32,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3" *ngFor="let recipe of recipeList">
-        <a><img class="img-fluid" src="{{recipe.strMealThumb}}" alt="{{recipe.strMeal}}"></a>
+        <a [routerLink]="['/RecipePage', recipe.idMeal]"><img class="img-fluid" src="{{recipe.strMealThumb}}" alt="{{recipe.strMeal}}"></a>
         <br>
         <label>{{recipe.strMeal}}</label>
       </div>
